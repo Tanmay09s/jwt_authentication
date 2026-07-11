@@ -11,12 +11,10 @@ dotenv.config();
 //conecting to mongo DB
 connectDB();
 
-app.use(
-  cors({
-    origin: "https://your-project.vercel.app",
+app.use(cors({
+    origin: "https://jwt-authentication-pink.vercel.app",
     credentials: true,
-  })
-);
+}));
 
 app.use("/api/auth",authRoutes);
 
